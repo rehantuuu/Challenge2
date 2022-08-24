@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Binar Rental Car</title>
+
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+        body{
+
+    background: #F1F3FF;
+
+    font-family: 'Helvetica';
+
+    font-weight: 400;
+
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px ;
+    }
+    nav ul{
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+    }
+    nav ul li a{
+        font-size: 19px;
+        text-decoration: none;
+        justify-content: space-between;
+    }
+    /*Hamburger Menu*/
+
+    
+    /* Buat Responsive */
+    /* Ukuran Tablet */
+    @media screen and (max-width: 768px) {
+        nav ul{
+            
+        }
+        
+    }
+    @media screen and (max-width: 576px) {
+        nav ul{
+            position: absolute;
+            right: 0;
+            flex-direction: column;
+            background-color: #F1F3FF;
+            z-index: -1;
+            transform: translateX(100);
+            transition: all 1s;
+        }
+        nav ul.slide{
+            transform: translateX(0);
+        }
+        .menu-toggle{
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        background-color: #0D28A6;
+        position: relative;
+
+        }
+        .menu-toggle input{
+            position: absolute;
+            width: 50px;
+            height: 20px;
+            left: -10px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .menu-toggle span{
+            display: block;
+            width: 28px;
+            height: 3px;
+            background-color: #F1F3FF;
+            border-radius: 3px ;
+        }
+
+        /*animation*/
+        .menu-toggle {
+
+        }
+        h1{
+            margin: 0;
+            size: 10px;
+            margin-top: -50px;
+            margin-left: -100px;
+            position: relative;
+            width: 300px;
+            height: 108px;
+            left: 10px;
+            top: 10px;
+
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 70;
+            font-size: 10px;
+            line-height: 150%;
+        }
+        p{
+            position: absolute;
+            margin-top: -30px;
+            margin-left: -100px;
+            width: 468px;
+            height: 60px;
+            left: 136px;
+            top: 301px;
+
+            font-family: 'Helvetica';
+            font-style: normal;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+        }
+        input[type=mulai] {
+            margin-top: -100px;
+            margin-left: -100px;
+            font-family: sans-serif;
+            font-size: 15px;
+            background: #5CB85F;
+            color: white;
+            border: white 3px solid;
+            border-radius: 5px;
+            
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 12px;
+            gap: 10px;
+            position: absolute;
+            width: 140px;
+            height: 36px;
+            left: 136px;
+            top: 3777px;
+    }
+    img.gambarbackground{
+        margin-top: 180px;
+        margin-left: -700px;
+        position: relative; 
+        width: 704px; 
+        height: 407px; 
+        left: 10px; 
+        top: 320px;
+    }
+    img.mobil{
+        margin-top: 180px;
+        margin-left: -700px;
+        position: relative; 
+        width: 500px; 
+        height: 200px; 
+        left: 850px; 
+        top: 200px;
+    }
+
+        
+        
+    }
+
+
+
+    h1{
+        position: absolute;
+        width: 568px;
+        height: 108px;
+        left: 136px;
+        top: 177px;
+
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 150%;
+    }
+    p{
+        position: absolute;
+        width: 468px;
+        height: 60px;
+        left: 136px;
+        top: 301px;
+
+
+
+        font-family: 'Helvetica';
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    input[type=mulai] {
+        font-family: sans-serif;
+        font-size: 15px;
+        background: #5CB85F;
+        color: white;
+        border: white 3px solid;
+        border-radius: 5px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 10px;
+        position: absolute;
+        width: 140px;
+        height: 36px;
+        left: 136px;
+        top: 377px;
+    }
+    input[type=regis] {
+        font-family: sans-serif;
+        font-size: 15px;
+        background: #5CB85F;
+        color: white;
+        border: white 3px solid;
+        border-radius: 2px;
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 12px;
+        gap: 10px;
+        position: absolute;
+        width: 65px;
+        height: 20px;
+        left: 1280px;
+        top: 19px;
+
+    }
+    a{
+        font-family: sans-serif;
+        font-size: 15px;
+        left: 1000px;
+        top: 377px;
+    }
+    img.gambarbackground{
+        position: absolute; 
+        width: 704px; 
+        height: 407px; 
+        left: 850px; 
+        top: 320px;
+    }
+    img.mobil{
+        position: absolute; 
+        width: 704px; 
+        height: 407px; 
+        left: 850px; 
+        top: 200px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <input type="mulai" value="Mulai Sewa Mobil">
+    <input type="regis" value="Register">  >
+
+    <nav>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo">
+
+        </div>
+        <ul>
+            <li><a href="ourservice.html">Our Service</a></li>
+            <li><a href="whyus.html">Why Us</a></li>
+            <li><a href="testi.html">Testimonial</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <div class="menu-toggle">
+            <input type="checkbox" style="opacity: 0;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <script>
+        const menuToogle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+
+        menuToogle.addEventListener('click', function(){
+            nav.classList.toggle('slide');
+        });
+
+    </script>
+
+    <h1>Sewa & Rental Mobil Terbaik di Purbalingga </h1>
+    <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas
+        <br> terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu
+        <br> untuk sewa mobil delama 24 jam
+    </p>
+    <img class="gambarbackground" src="img/Back.png" alt="Logo">
+    <img class="mobil" src="img/mobil.png" alt="Logo"  >
+</body>
+</html>
